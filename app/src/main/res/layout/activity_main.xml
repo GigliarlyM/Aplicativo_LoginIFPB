@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_ifpb" />
+
+    <View
+        android:id="@+id/conteirnerComponents"
+        style="@style/ConteinerComponents"
+        android:layout_below="@+id/image_logo"/>
+
+    <EditText
+        android:id="@+id/edit_users"
+        style="@style/Edit_Text"
+        android:hint="Usuário"
+        android:inputType="text"
+        android:drawableRight="@drawable/ic_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/conteirnerComponents"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/edit_password"
+        style="@style/Edit_Text"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_eye"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_users"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_entrar"
+        style="@style/Button"
+        android:text="@string/entrar"
+        android:layout_below="@+id/edit_password" />
+
+</RelativeLayout>
