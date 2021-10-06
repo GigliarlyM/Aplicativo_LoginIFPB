@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="5dp">
+
+    <View
+        android:id="@+id/view_Calc"
+        style="@style/ConteinerComponents"
+        android:layout_centerVertical="true"
+        android:layout_height="400dp" />
+
+    <TextView
+        android:id="@+id/title_calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_calc"
+        android:textSize="40sp"
+        android:layout_alignTop="@+id/view_Calc"
+        android:layout_margin="40dp"
+        android:gravity="center"/>
+
+    <EditText
+        style="@style/Edit_Text"
+        android:layout_below="@+id/title_calc"
+        android:hint="DD/MM/AAAA"/>
+
+</RelativeLayout>
