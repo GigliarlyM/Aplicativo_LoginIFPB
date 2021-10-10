@@ -2,4 +2,6 @@
     <string name="app_name">SePodeVotar</string>
     <string name="entrar">Entrar</string>
     <string name="text_calc">Calculo</string>
+    <string name="dialog_text" >Alerta! A senha está incorreta.</string>
+    <string name="fire" >OK!</string>
 </resources>

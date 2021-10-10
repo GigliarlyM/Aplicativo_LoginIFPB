@@ -25,6 +25,7 @@
     <EditText
         style="@style/Edit_Text"
         android:layout_below="@+id/title_calc"
-        android:hint="DD/MM/AAAA"/>
+        android:hint="DD/MM/AAAA"
+        android:inputType="date"/>
 
 </RelativeLayout>
