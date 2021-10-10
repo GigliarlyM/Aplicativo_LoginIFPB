@@ -1,17 +1,28 @@
 package com.example.sepodevotar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class DetalhesVoto {
+public class CalculoIdade extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calculo_idade);
+
+        getSupportActionBar().hide();
+    }
 }
 
 class CalculaIdade {
     //Calcula a Idade baseado em java.util.Date
-    public static int CalculaIdade(java.util.Date dataNasc){
+    public static int CalculaIdade(java.util.Date dataNasc) {
 
         Calendar dateOfBirth = new GregorianCalendar();
-
         dateOfBirth.setTime(dataNasc);
 
         // Cria um objeto calendar com a data atual

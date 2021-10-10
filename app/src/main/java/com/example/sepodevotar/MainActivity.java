@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String value = editSenha.getText().toString();
                 if (value.equals("Sisa2021")){
-                    Intent intent = new Intent(MainActivity.this, DetalhesVoto.class);
+                    Intent intent = new Intent(MainActivity.this, CalculoIdade.class);
                     startActivity(intent);
                 }else{
                     dialogAlert();
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static class ViewHolder {
         Button btnConfirm;
-        // EditText editSenha;
     }
 
     private AlertDialog alerta;

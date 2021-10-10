@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SePodeVotar">
         <activity
+            android:name=".CalculoIdade"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
