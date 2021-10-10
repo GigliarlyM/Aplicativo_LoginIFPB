@@ -11,8 +11,8 @@
     <View
         android:id="@+id/view_Calc"
         style="@style/ConteinerComponents"
-        android:layout_centerVertical="true"
-        android:layout_height="400dp" />
+        android:layout_height="400dp"
+        android:layout_centerVertical="true" />
 
     <TextView
         android:id="@+id/title_calc"
@@ -25,9 +25,20 @@
         android:gravity="center"/>
 
     <EditText
+        android:id="@+id/text_Data"
         style="@style/Edit_Text"
         android:layout_below="@+id/title_calc"
         android:hint="DD/MM/AAAA"
         android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/text_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:layout_below="@+id/text_Data"
+        android:layout_alignLeft="@+id/view_Calc"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
 
 </RelativeLayout>
