@@ -14,6 +14,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private ViewHolder mViewHolder = new ViewHolder();
+    public String nameUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         Button btnConfirm;
         EditText editUser;
     }
-
-    public String nameUser;
 
     private AlertDialog alerta;
 
