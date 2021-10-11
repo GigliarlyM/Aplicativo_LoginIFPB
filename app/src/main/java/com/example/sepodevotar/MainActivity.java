@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         this.mViewHolder.btnConfirm = findViewById(R.id.button_entrar);
+        this.mViewHolder.editUser = findViewById(R.id.edit_users);
         EditText editSenha = findViewById(R.id.edit_password);
 
+        this.nameUser = this.mViewHolder.editUser.getText().toString();
 
         this.mViewHolder.btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static class ViewHolder {
         Button btnConfirm;
+        EditText editUser;
     }
+
+    public String nameUser;
 
     private AlertDialog alerta;
 

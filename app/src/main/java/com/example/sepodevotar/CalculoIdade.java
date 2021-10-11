@@ -2,7 +2,9 @@ package com.example.sepodevotar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
@@ -33,8 +35,14 @@ public class CalculoIdade extends AppCompatActivity {
         this.mViewHolder.textData = findViewById(R.id.text_Data);
         this.mViewHolder.buttonStart = findViewById(R.id.button_calcular);
         this.mViewHolder.textLink = findViewById(R.id.text_link_inicial);
+        this.mViewHolder.textName = findViewById(R.id.edit_users);
 
+        MainActivity principal = new MainActivity();
+
+        String name = principal.nameUser;
         clearText();
+        dialogAlert("Seja BEM-VINDO " + name,
+                "Iremos calcular sua idade e mostrar se você pode votar ou não");
     }
 
     @Override
@@ -66,6 +74,7 @@ public class CalculoIdade extends AppCompatActivity {
         EditText textData;
         Button buttonStart;
         TextView textLink;
+        EditText textName;
     }
 
     public void testVoto() {
@@ -77,7 +86,8 @@ public class CalculoIdade extends AppCompatActivity {
         try {
             dataNasc = format.parse(dataNasci);
         } catch (ParseException e) {
-            e.printStackTrace();
+            dialogAlert("Alerta",
+                    "Formato de data incorreto! Tente novamente.");
         }
 
         int idade = calculaIdade(dataNasc);
@@ -119,6 +129,25 @@ public class CalculoIdade extends AppCompatActivity {
             age--;
         }
         return age;
+    }
+
+    private AlertDialog alerta;
+
+    private void dialogAlert(String titlle, String msg) {
+        //Cria o gerador do AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(titlle);
+        builder.setMessage(msg);
+        //define um botão como positivo
+        builder.setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                // nada
+            }
+        });
+        //cria o AlertDialog
+        alerta = builder.create();
+        //Exibe
+        alerta.show();
     }
 
 }

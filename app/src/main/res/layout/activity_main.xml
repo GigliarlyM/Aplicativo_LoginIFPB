@@ -23,13 +23,13 @@
     <EditText
         android:id="@+id/edit_users"
         style="@style/Edit_Text"
-        android:hint="Usuário"
-        android:inputType="text"
-        android:drawableRight="@drawable/ic_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/conteirnerComponents"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/ic_users"
+        android:hint="Usuário"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/edit_password"
