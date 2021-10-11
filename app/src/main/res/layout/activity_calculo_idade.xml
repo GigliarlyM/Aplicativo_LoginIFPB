@@ -11,8 +11,7 @@
     <View
         android:id="@+id/view_Calc"
         style="@style/ConteinerComponents"
-        android:layout_height="400dp"
-        android:layout_centerVertical="true" />
+        android:layout_height="400dp" />
 
     <TextView
         android:id="@+id/title_calc"
@@ -39,6 +38,19 @@
         android:layout_below="@+id/text_Data"
         android:layout_alignLeft="@+id/view_Calc"
         android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_calcular"
+        style="@style/Button"
+        android:layout_below="@id/text_resultado"
+        android:text="Resultado" />
+
+    <TextView
+        android:id="@+id/text_link_inicial"
+        style="@style/Text_View"
+        android:layout_below="@id/view_Calc"
+        android:text="@string/voltar_tela_inicial"
         android:textSize="20sp"/>
 
 </RelativeLayout>

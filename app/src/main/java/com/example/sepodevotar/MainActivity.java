@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         //Cria o gerador do AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         //define o titulo
-        builder.setTitle("Titulo");
+        builder.setTitle("Alerta");
         //define a mensagem
-        builder.setMessage("Qualifique este software");
+        builder.setMessage("Sua senha está incorreta!");
         //define um botão como positivo
-        builder.setPositiveButton(R.string.dialog_text, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {
                 // Toast.makeText(MainActivity.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
             }
