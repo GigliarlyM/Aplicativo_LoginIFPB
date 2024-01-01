@@ -5,8 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.sepodevotar.data.DataService;
-
 import retrofit2.Retrofit;
 
 public class DetalhesVoto extends AppCompatActivity {
@@ -20,9 +18,9 @@ public class DetalhesVoto extends AppCompatActivity {
         String baseUrl = "https://api.github.com/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                //.addConverterFactory(GsonConverterFactory.create())
+//                .addConverterFactory()
                 .build();
 
-        DataService githubApi = retrofit.create(DataService.class);
+//        DataService githubApi = retrofit.create(DataService.class);
     }
 }
