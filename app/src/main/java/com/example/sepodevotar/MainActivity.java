@@ -1,41 +1,32 @@
 package com.example.sepodevotar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewHolder mViewHolder = new ViewHolder();
+    private Button btnConfirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().hide();
+        this.btnConfirm = findViewById(R.id.button_entrar);
 
-        this.mViewHolder.btnConfirm = findViewById(R.id.button_entrar);
-
-        this.mViewHolder.btnConfirm.setOnClickListener(new View.OnClickListener() {
+        this.btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(MainActivity.this, DetalhesVoto.class);
-                startActivity(intent);
+                startActivity(
+                    new Intent(MainActivity.this, DetalhesSalaActivity.class)
+                );
             }
         });
-    }
-
-    private static class ViewHolder {
-        Button btnConfirm;
     }
 
 }

@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background"
+    android:orientation="vertical"
     android:padding="5dp"
     tools:context=".MainActivity">
 
@@ -18,34 +18,38 @@
     <View
         android:id="@+id/conteirnerComponents"
         style="@style/ConteinerComponents"
-        android:layout_below="@+id/image_logo"/>
+        android:layout_below="@+id/image_logo" />
 
     <EditText
         android:id="@+id/edit_users"
         style="@style/Edit_Text"
-        android:hint="Usuário"
-        android:inputType="text"
-        android:drawableRight="@drawable/ic_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/conteirnerComponents"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/ic_users"
+        android:hint="Usuário"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/edit_password"
         style="@style/Edit_Text"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:drawableRight="@drawable/ic_eye"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_users"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/ic_eye"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_entrar"
         style="@style/Button"
-        android:text="@string/entrar"
-        android:layout_below="@+id/edit_password" />
+        android:layout_below="@+id/edit_password"
+        android:text="@string/entrar" />
 
 </RelativeLayout>
